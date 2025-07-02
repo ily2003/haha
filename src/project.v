@@ -23,10 +23,10 @@ wire reset=~rst_n;
     wire _unused=&{ena,uio_in,1'b0};
     always @(posedge clk or posedge reset) begin
         if (rest) begin
-            uo_out<=0;
+            uo_out<=0
         end else begin
             uo_out[3:0]<=ui_in[7:4]+ui_in[3:0];
-            uo_out[7:4]<=0;
+            uo_out[7:4]<=0
         end
     end
 endmodule
